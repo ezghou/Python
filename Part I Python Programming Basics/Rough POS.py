@@ -16,10 +16,18 @@ print('2. Inquire')
 print('3. Credit')
 
 while True:
-    print('Please type your name!')
+    print('Who are you?')
     name = input()
-    if name == 'your name':
-        break;
+    if name != 'Joe':
+        continue
+
+    print('Hello, Joe. What is the password? (It is a fish.)')
+    password = input()
+
+    if password == 'swordfish':
+        break
+
+print('Access granted')
 
 
 
