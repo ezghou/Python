@@ -29,7 +29,6 @@ while True:
 
 print('Access granted')
 print('Thank you')
-
 print('My name is')
 
 for i in range(5):
