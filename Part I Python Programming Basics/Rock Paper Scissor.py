@@ -1,45 +1,70 @@
 import random
 
-print('Let us play Rock, Paper, Scissors!')
-
+print('Rock, Paper, Scissors!')
+print()
+win = 0
+loss = 0
+tie = 0
 
 while True:
-    chosen = random.randint(1,3)
-    print(chosen)
-    comp =''
+    print(str(win) + ' Wins,' + str(loss) +  ' Losses, ' +str(tie) + ' Ties')
+    print()
+    print('Enter your move:  (r)ock (p)aper (s)cissors or (q)uit')
     guess = input()
+
+    if guess == 'p':
+        print('Paper versus ...')
+    elif guess == 'r':
+        print('Rock versus ...')
+    elif guess == 's':
+        print('Scissors versus ...')
+    else:
+        break
+
+
+    chosen = random.randint(1,3)
+    comp =''
 
     if chosen == 1:
         comp = 'Rock'
-        print(comp + ' vs. ' + guess)
-        if guess == 'Paper':
+        print(comp)
+        if guess == 'p':
             print('You beat me!')
-        elif guess == comp:
+            win += 1
+        elif guess == 'r':
             print('DRAW!')
+            tie += 1
         else:
             print('Nah, I win!')
+            loss += 1
 
     elif chosen == 2:
         comp = 'Paper'
-        print(comp + ' vs. ' + guess)
-        if guess == 'Scissors':
+        print(comp)
+        if guess == 's':
             print('You beat me!')
-        elif guess == comp:
+            win += 1
+        elif guess == 'p':
             print('DRAW!')
+            tie += 1
         else:
             print('Nah, I win!')
+            loss += 1
 
     else:
         comp = 'Scissors'
-        print(comp + ' vs. ' + guess)
-        if guess == 'Rock':
+        print(comp)
+        if guess == 'r':
             print('You beat me!')
-        elif guess == comp:
+            win += 1
+        elif guess == 's':
             print('DRAW!')
+            tie += 1
         else:
             print('Nah, I win!')
+            loss += 1
 
-    break
+
 
 
 
