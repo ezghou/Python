@@ -1,4 +1,4 @@
-import random
+import random, sys
 
 print('Rock, Paper, Scissors!')
 print()
@@ -19,7 +19,7 @@ while True:
     elif guess == 's':
         print('Scissors versus ...')
     else:
-        break
+        sys.exit()
 
 
     chosen = random.randint(1,3)
