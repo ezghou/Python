@@ -1,15 +1,44 @@
 import random, sys
 
-print('Rock, Paper, Scissors!')
-print()
 win = 0
 loss = 0
 tie = 0
 
-while True:
+def printIntro(win,loss,tie):
+    print('Rock, Paper, Scissors!')
+    print()
     print(str(win) + ' Wins,' + str(loss) +  ' Losses, ' +str(tie) + ' Ties')
     print()
     print('Enter your move:  (r)ock (p)aper (s)cissors or (q)uit')
+
+def iWin():
+
+    print()
+    print('Nah, I win!')
+    print()
+    print()
+    global loss
+    loss += 1
+
+def youBeatMe():
+    print()
+    print('You beat me!')
+    print()
+    print()
+    global win
+    win += 1
+
+def draw():
+    print()
+    print('DRAW!')
+    print()
+    print()
+    global tie
+    tie += 1
+
+while True:
+    printIntro(win,loss,tie)
+
     guess = input()
 
     if guess == 'p':
@@ -29,40 +58,31 @@ while True:
         comp = 'Rock'
         print(comp)
         if guess == 'p':
-            print('You beat me!')
-            win += 1
+            youBeatMe()
         elif guess == 'r':
-            print('DRAW!')
-            tie += 1
+            draw()
         else:
-            print('Nah, I win!')
-            loss += 1
+            iWin()
 
     elif chosen == 2:
         comp = 'Paper'
         print(comp)
         if guess == 's':
-            print('You beat me!')
-            win += 1
+            youBeatMe()
         elif guess == 'p':
-            print('DRAW!')
-            tie += 1
+            draw()
         else:
-            print('Nah, I win!')
-            loss += 1
+            iWin()
 
     else:
         comp = 'Scissors'
         print(comp)
         if guess == 'r':
-            print('You beat me!')
-            win += 1
+            youBeatMe()
         elif guess == 's':
-            print('DRAW!')
-            tie += 1
+           draw()
         else:
-            print('Nah, I win!')
-            loss += 1
+            iWin()
 
 
 
