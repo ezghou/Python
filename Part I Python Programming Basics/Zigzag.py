@@ -1,29 +1,36 @@
 # Write your code here :-)
+import time, sys
 
-reset = 5
-count = 10
-while count != 0:
-    while reset != 0:
-        space = reset
-        while space != 0:
-            print(' ', end = '')
-            space -= 1
-        print('*****')
+reset = 20
+
+try:
+    while True:
+        while reset != 0:
+            space = reset
+            while space != 0:
+                print(' ', end = '')
+                space -= 1
+            print('****************')
+            time.sleep(0.1)
+
+            reset -= 1
+
+        reset += 1
+
+        while reset < 20:
+            bar = 5
+            reset += 1
+            space = reset
+            while space != 0:
+                print(' ', end = '')
+                space -= 1
+            print('****************')
+            time.sleep(0.1)
 
         reset -= 1
 
-    reset += 1
-
-    while reset < 5:
-        bar = 5
-        reset += 1
-        space = reset
-        while space != 0:
-            print(' ', end = '')
-            space -= 1
-        print('*****')
-
-    reset -= 1
+except KeyboardInterrupt:
+    sys.exit()
 
 
 
@@ -32,14 +39,5 @@ while count != 0:
 
 
 
-
-
-
-
-
-
-
-
-    count -= 1
 
 
