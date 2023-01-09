@@ -11,11 +11,24 @@ def collatz(number):
         print(answer)
         return answer
 
-print('Enter a number: ', end = '')
-guess = int(input())
+try:
+    print('Enter a number: ', end = '')
+    guess = int(input())
 
-while True:
-    if guess == 1:
-        break
-    guess = collatz(guess)
+    while True:
+        if guess == 1:
+            break
+        guess = collatz(guess)
+
+except:
+    print('Enter a valid number!')
+
+
+
+
+
+
+
+
+
 
