@@ -15,6 +15,9 @@ while True:
 print()
 print('The dog names are:')
 
-for i in range(len(myDogs)):
-    print('Index ' + str(i) + ' is dog ' + myDogs[i] )
+#for i in range(len(myDogs)):
+#    print('Index ' + str(i) + ' is dog ' + myDogs[i] )
+
+for index, name in enumerate(myDogs):
+    print(' Index ' + str(index) + ' is dog ' + name )
 
