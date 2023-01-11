@@ -1,14 +1,19 @@
 
-myDogs = ['','','']
-count = 0
+myDogs = []
 while True:
-    print('Enter name of your dog:', end = '')
+    print('Enter name of your dog (enter 0 to end):', end = '')
 
-    myDogs[count] = input()
-    print(myDogs)
-    count += 1
-    if count > 2:
+    dog = input()
+
+    if dog == '0':
         break
 
-print(myDogs)
+    myDogs = myDogs + [dog] #List Concatenation
+    print(myDogs)
+
+
+print()
+print('The dog names are:')
+for name in myDogs:
+    print(' ' + name)
 
