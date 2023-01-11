@@ -21,3 +21,13 @@ print('The dog names are:')
 for index, name in enumerate(myDogs):
     print(' Index ' + str(index) + ' is dog ' + name )
 
+
+
+def eggs(someParameters):
+    someParameters.append("heyo")
+
+spam = [1,2,3]
+eggs(spam)
+
+print(spam)
+
