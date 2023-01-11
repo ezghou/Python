@@ -14,6 +14,7 @@ while True:
 
 print()
 print('The dog names are:')
-for name in myDogs:
-    print(' ' + name)
+
+for i in range(len(myDogs)):
+    print('Index ' + str(i) + ' is dog ' + myDogs[i] )
 
