@@ -18,7 +18,7 @@ print('The dog names are:')
 #for i in range(len(myDogs)):
 #    print('Index ' + str(i) + ' is dog ' + myDogs[i] )
 
-for index, name in enumerate(myDogs):
+for index, name in enumerate(myDogs): #Enumerate return index and item itself
     print(' Index ' + str(index) + ' is dog ' + name )
 
 
